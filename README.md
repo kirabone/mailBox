@@ -1,4 +1,4 @@
-cli chat application
+chatxi application
 
 current version : v0.1
 
