@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-BASE_URL = "http://127.0.0.1:8000/api/"
+BASE_URL = "https://mailbox-n00w.onrender.com/api/"
 
 accounts = {}        # username → session
 current_user = None
@@ -108,6 +108,7 @@ def register(parts):
 
     s = requests.Session()
 
+    # ✅ CORRECT: matches backend exactly
     res = s.post(BASE_URL + "register/", data={
         "username": user,
         "password": p1,
@@ -135,6 +136,7 @@ def login(parts):
 
     s = requests.Session()
 
+    # ✅ CORRECT
     res = s.post(BASE_URL + "login/", data={
         "username": user,
         "password": pwd
